@@ -1,0 +1,27 @@
+﻿name: feature_payment
+description: Enterprise Payment processing module.
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.3
+  fpdart: ^1.1.0
+  http: ^1.1.0
+
+  core_network:
+    path: ../../core/core_network
+  core_ui_kit:
+    path: ../../core/core_ui_kit
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  mocktail: ^1.0.3
+  bloc_test: ^9.1.5
