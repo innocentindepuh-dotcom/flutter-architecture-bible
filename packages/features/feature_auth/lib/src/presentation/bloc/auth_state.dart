@@ -1,0 +1,29 @@
+// packages/features/feature_auth/lib/src/presentation/bloc/auth_state.dart
+
+import '../../domain/entities/user_entity.dart';
+
+sealed class AuthState {
+  const AuthState();
+}
+
+class AuthInitialState extends AuthState {
+  const AuthInitialState();
+}
+
+class AuthLoadingState extends AuthState {
+  const AuthLoadingState();
+}
+
+class AuthenticatedState extends AuthState {
+  final UserEntity user;
+  const AuthenticatedState({required this.user});
+}
+
+class UnauthenticatedState extends AuthState {
+  const UnauthenticatedState();
+}
+
+class AuthFailureState extends AuthState {
+  final String errorMessage;
+  const AuthFailureState({required this.errorMessage});
+}
